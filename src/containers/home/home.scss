@@ -1,0 +1,103 @@
+.home {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9;
+  &-text-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      color: var(--selected-theme-main-color);
+      margin: 0;
+      font-weight: 400;
+      font-size: 8rem;
+      line-height: 10rem;
+      position: relative;
+      font-family: "Inconsolata", Consolas, monospace;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typingEffect 2.5s steps(30, end);
+    }
+  }
+  .contact-me {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+    animation: fromBottomToTop 2.5s ease-in-out;
+    button,
+    a {
+      cursor: pointer;
+      padding: 10px 70px;
+      font-size: 2rem;
+      background: transparent;
+      color: var(--selected-theme-main-color);
+      border: 1.5px solid var(--selected-theme-main-color);
+      border-radius: 4px;
+      font-weight: 500;
+      &:hover {
+        color: #000;
+        background-color: var(--selected-theme-main-color);
+      }
+    }
+    &-buttons-wrapper {
+      display: flex;
+      gap: 10px;
+    }
+    &-socials-wrapper {
+      display: flex;
+      gap: 10px;
+      svg {
+        color: var(--selected-theme-main-color);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@keyframes typingEffect {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes fromBottomToTop {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .home-text-wrapper h1 {
+    font-size: 3rem;
+    list-style: 5rem;
+  }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 768px) {
+  .home-text-wrapper h1 {
+    font-size: 4rem;
+    list-style: 6rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+  .home-text-wrapper h1 {
+    font-size: 4rem;
+    list-style: 8rem;
+  }
+}

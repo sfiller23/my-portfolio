@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --selected-theme-background-color: var(--blue-theme-background-color);
+  --selected-theme-main-color: var(--blue-theme-main-color);
+  --selected-theme-sub-text-color: var(--blue-theme-sub-text-color);
+  --selected-theme-nav-background-color: var(--blue-theme-nav-background-color);
+
+  /* Primary color blue */
+  --blue-theme-background-color: #1d1d1d;
+  --blue-theme-main-color: #5078ff;
+  --blue-theme-sub-text-color: #fff;
+  --blue-theme-nav-background-color: #1d1d1d;
+
+  /* Primary color green */
+  --green-theme-background-color: #1d1d1d;
+  --green-theme-main-color: #6ac045;
+  --green-theme-sub-text-color: #fff;
+  --green-theme-nav-background-color: #1d1d1d;
+
+  /* Primary color red */
+  --red-theme-background-color: #1d1d1d;
+  --red-theme-main-color: #e82a2a;
+  --red-theme-sub-text-color: #fff;
+  --red-theme-nav-background-color: #1d1d1d;
+
+  /* Primary color yellow */
+  --yellow-theme-background-color: #1d1d1d;
+  --yellow-theme-main-color: #ffdd40;
+  --yellow-theme-sub-text-color: #fff;
+  --yellow-theme-nav-background-color: #1d1d1d;
+
+  --font-base: "Roboto Slab", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  background: var(--selected-theme-background-color);
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
