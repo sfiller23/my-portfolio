@@ -1,4 +1,12 @@
-export const portfolioData = [
+interface PortfolioData {
+  projectName: string;
+  projectLink: string;
+  projectDescription: string;
+  projectMainTech: string;
+  projectImage: string;
+}
+
+export const portfolioData: PortfolioData[] = [
   {
     projectName: "Portfolio web side",
     projectLink: "https://portfolio-web-side.herokuapp.com/",

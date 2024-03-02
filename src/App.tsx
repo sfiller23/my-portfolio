@@ -2,12 +2,11 @@ import { Route, Routes } from "react-router-dom";
 import "./App.scss";
 import NavBar from "./components/navBar/NavBar";
 import Theme from "./components/theme/Theme";
-import About from "./containers/about/About";
-import Contact from "./containers/contact/Contact";
-import Home from "./containers/home/Home";
-import Portfolio from "./containers/portfolio/Portfolio";
-import Resume from "./containers/resume/Resume";
-import Skills from "./containers/skills/Skills";
+import About from "./pages/about/About";
+import Contact from "./pages/contact/Contact";
+import Home from "./pages/home/Home";
+import Portfolio from "./pages/portfolio/Portfolio";
+import Resume from "./pages/resume/Resume";
 
 function App() {
   return (
@@ -23,7 +22,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/resume" element={<Resume />} />
-          <Route path="/skills" element={<Skills />} />
         </Routes>
       </div>
     </div>

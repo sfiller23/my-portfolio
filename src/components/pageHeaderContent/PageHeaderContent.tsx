@@ -1,6 +1,11 @@
 import "./pageHeaderContent.scss";
 
-export default function PageHeaderContent(props) {
+interface PageHeaderContent {
+  headerText: string;
+  icon: JSX.Element;
+}
+
+export default function PageHeaderContent(props: PageHeaderContent) {
   const { headerText, icon } = props;
   return (
     <div className="wrapper">

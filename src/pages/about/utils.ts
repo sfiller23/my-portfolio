@@ -1,4 +1,9 @@
-export const personalData = [
+interface PersonalData {
+  label: string;
+  value: string;
+}
+
+export const personalData: PersonalData[] = [
   {
     label: "Name",
     value: "Shimon Filler",

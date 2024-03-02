@@ -2,12 +2,12 @@ import { useState } from "react";
 import { FaBars, FaReact } from "react-icons/fa";
 import { HiX } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import { navMenus } from "./config";
 import "./navBar.scss";
+import { navMenus } from "./utils";
 
 export default function NavBar() {
-  const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
+  const [click, setClick] = useState<boolean>(false);
+
   return (
     <div>
       <nav className="navbar">
@@ -28,7 +28,7 @@ export default function NavBar() {
               </li>
             ))}
           </ul>
-          <div className="nav-icon" onClick={handleClick}>
+          <div className="nav-icon" onClick={() => setClick(!click)}>
             {click ? <HiX size={30} /> : <FaBars size={30} />}
           </div>
         </div>

@@ -3,8 +3,13 @@ import { ImCog } from "react-icons/im";
 import setCurrentTheme from "../../helpers/theme";
 import "./theme.scss";
 
+interface ColorsArray {
+  id: string;
+  bgColor: string;
+}
+
 export default function Theme() {
-  const colorsArray = [
+  const colorsArray: ColorsArray[] = [
     {
       id: "yellow",
       bgColor: "#ffdd40",
@@ -22,10 +27,10 @@ export default function Theme() {
       bgColor: "#5078FF",
     },
   ];
-  const [theme, setTheme] = useState("blue");
-  const [toggle, setToggle] = useState(false);
+  const [theme, setTheme] = useState<string>("blue");
+  const [toggle, setToggle] = useState<boolean>(false);
 
-  const handleToggleTheme = (id: string) => {
+  const handleToggleTheme = (id: string): void => {
     setTheme(id);
     setToggle(false);
   };
