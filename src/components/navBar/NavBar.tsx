@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { FaBars, FaReact } from "react-icons/fa";
 import { HiX } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./navBar.scss";
 import { navMenus } from "./utils";
 
 export default function NavBar() {
   const [click, setClick] = useState<boolean>(false);
+
+  const location = useLocation();
 
   return (
     <div>
@@ -22,7 +24,12 @@ export default function NavBar() {
           >
             {navMenus.map((item, key) => (
               <li key={key} className="navbar-container-menu-item">
-                <Link className="navbar-container-menu-item-links" to={item.to}>
+                <Link
+                  className={`navbar-container-menu-item-links ${
+                    item.to === location.pathname ? "active" : ""
+                  }`}
+                  to={item.to}
+                >
                   {item.label}
                 </Link>
               </li>
