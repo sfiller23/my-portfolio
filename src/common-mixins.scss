@@ -1,0 +1,65 @@
+@mixin small {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin smallMedium {
+  @media screen and (max-width: 550px) {
+    @content;
+  }
+}
+
+@mixin mediumLarge {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin small-mediumLarge {
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin smallMedium-mediumLarge {
+  @media only screen and (min-width: 551px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediumLarge-large {
+  @media only screen and (min-width: 769px) and (max-width: 990px) {
+    @content;
+  }
+}
+
+@mixin typingEffect {
+  @keyframes typingEffect {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+}
+
+@mixin titleFormat {
+  &-header-text::before,
+  &-header-text::after {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 5px;
+    background-color: var(--selected-theme-main-color);
+    bottom: -1px;
+  }
+
+  &-header-text::before {
+    left: 0;
+  }
+  &-header-text::after {
+    right: 0;
+  }
+}

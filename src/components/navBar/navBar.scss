@@ -1,3 +1,4 @@
+@import "../../common-mixins.scss";
 .navbar {
   height: 80px;
   display: flex;
@@ -7,7 +8,7 @@
   position: sticky;
   top: 0;
   z-index: 20;
-  background-color: var(--selected-theme-nav-background-color);
+  background-color: #1d1d1d;
 
   &-container {
     display: flex;
@@ -74,7 +75,7 @@
   display: none;
 }
 
-@media only screen and (max-width: 768px) {
+@include mediumLarge() {
   .navbar-container-menu {
     display: flex;
     flex-direction: column;

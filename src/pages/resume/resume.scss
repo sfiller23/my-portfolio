@@ -1,3 +1,4 @@
+@import "../../common-mixins.scss";
 .resume {
   height: 100%;
 }
@@ -27,21 +28,7 @@
       padding: 5px 10px;
       border-bottom: 2px solid var(--selected-theme-main-color);
     }
-    &-header-text::after,
-    &-header-text::before {
-      position: absolute;
-      content: "";
-      width: 2px;
-      height: 5px;
-      background-color: var(--selected-theme-main-color);
-      bottom: -1px;
-    }
-    &-header-text::before {
-      left: 0;
-    }
-    &-header-text::after {
-      right: 0;
-    }
+    @include titleFormat();
     .vertical-timeline-element {
       padding: 0px 0px 30px 0px;
       &:last-child {
@@ -79,7 +66,7 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@include mediumLarge() {
   .timeline {
     flex-direction: column;
     width: 100%;

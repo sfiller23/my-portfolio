@@ -1,3 +1,4 @@
+@import "../../common-mixins.scss";
 .home {
   position: relative;
   height: 100%;
@@ -61,15 +62,6 @@
   }
 }
 
-@keyframes typingEffect {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
 @keyframes fromBottomToTop {
   from {
     transform: translateY(100px);
@@ -81,23 +73,25 @@
   }
 }
 
-@media only screen and (max-width: 550px) {
+@include smallMedium() {
   .home-text-wrapper h1 {
     font-size: 3rem;
     list-style: 5rem;
   }
 }
 
-@media only screen and (min-width: 551px) and (max-width: 768px) {
+@include smallMedium-mediumLarge() {
   .home-text-wrapper h1 {
     font-size: 4rem;
     list-style: 6rem;
   }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 990px) {
+@include mediumLarge-large() {
   .home-text-wrapper h1 {
     font-size: 4rem;
     list-style: 8rem;
   }
 }
+
+@include typingEffect();
