@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { AiFillProject } from "react-icons/ai";
 import PageHeaderContent from "../../components/pageHeaderContent/PageHeaderContent";
 import "./portfolio.scss";
@@ -23,15 +23,37 @@ export default function Portfolio() {
               className="portfolio-content-cards-item"
             >
               <div className="portfolio-content-cards-item-img-wrapper">
-                <a href="">
                   <img src={item.projectImage} alt={item.projectName} />
-                </a>
               </div>
               <div className="overlay">
                 {hoveredIndex === index && (
                   <div>
                     <p>{item.projectName}</p>
-                    <button>visit</button>
+                    <div id="main-content">
+                      <p id="description">{item.projectDescription}</p>
+                      <p>Skills Demonstrated</p>
+                        <ul>
+                          {item.skills.map((skill, index) => (
+                            <li key={index}>{skill}</li>
+                          ))}
+                        </ul>
+                    
+                    
+                    {item.drawbacks &&
+                    <Fragment>
+                      <p>Drawbacks</p>
+                      <ul>
+                        {item.drawbacks?.map((skill, index) => (
+                              <li key={index}>{skill}</li>
+                            ))}
+                      </ul>                           
+                    </Fragment>
+                    }
+                      <div className="links">
+                        {item.projectLink && <a href={item.projectSourceCode} target="_blank">Visit</a>}
+                        {item.projectSourceCode && <a href={item.projectSourceCode} target="_blank">Code</a>}
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>

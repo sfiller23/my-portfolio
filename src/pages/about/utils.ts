@@ -10,19 +10,15 @@ export const personalData: PersonalData[] = [
   },
   {
     label: "Age",
-    value: "37",
+    value: "38",
   },
   {
     label: "Address",
-    value: "Dgania 20, Tiberias, Israel.",
+    value: "Bat-Yam, Israel.",
   },
   {
     label: "Email",
     value: "shimonfiller@gmail.com",
-  },
-  {
-    label: "Name",
-    value: "Shimon Filler",
   },
   {
     label: "Contact Number",

@@ -1,42 +1,78 @@
 interface PortfolioData {
   projectName: string;
-  projectLink: string;
+  projectLink?: string;
+  projectSourceCode?: string;
   projectDescription: string;
-  projectMainTech: string;
+  skills: string[];
+  drawbacks?: string[];
   projectImage: string;
 }
 
 export const portfolioData: PortfolioData[] = [
   {
-    projectName: "Portfolio web side",
-    projectLink: "https://portfolio-web-side.herokuapp.com/",
-    projectDescription:
-      "This is a portfolio web side application built with React, Redux, and Node.js. It is a full stack application that allows users to create, edit, and delete projects.",
-    projectMainTech: "React, Redux, Node.js",
-    projectImage: "../../../../public/images/Portfolio.jpg",
+    projectName: "Current Site",
+    projectDescription:"This is a portfolio web side. It's built with React and TypeScript, using context API for state management.",
+    projectSourceCode: "https://github.com/sfiller23/my-portfolio",
+    skills: ["Cool animations", "Responsive design (Desktop and tablet)", "SCSS", "Theme colors managment using global state"],
+    drawbacks:["No common component library", "Not responsive for mobile"],
+    projectImage: "../../../../public/images/Portfolio.png",
   },
   {
-    projectName: "Portfolio web side",
-    projectLink: "https://portfolio-web-side.herokuapp.com/",
+    projectName: "Demo chat app",
+    projectLink: "https://sfchat-47232.web.app/login",
+    projectSourceCode: "https://github.com/sfiller23/sfChat",
     projectDescription:
-      "This is a portfolio web side application built with React, Redux, and Node.js. It is a full stack application that allows users to create, edit, and delete projects.",
-    projectMainTech: "React, Redux, Node.js",
-    projectImage: "../../../../public/images/Portfolio.jpg",
+      "The app was created to demontstare complex data handling in a Real-time chat, including states like seen, sent, writing and profile image upload (React+Typescript)",
+    skills: ["Authentication flow","Fully responsive","Webhooks","Combination of Context and Redux","API management using Redux-toolkit","SCSS","Code splitting"],
+    projectImage: "../../../../public/images/chat.png",
   },
   {
-    projectName: "Portfolio web side",
-    projectLink: "https://portfolio-web-side.herokuapp.com/",
+    projectName: "My component library",
+    projectSourceCode: "https://github.com/sfiller23/sf-component-library",
     projectDescription:
-      "This is a portfolio web side application built with React, Redux, and Node.js. It is a full stack application that allows users to create, edit, and delete projects.",
-    projectMainTech: "React, Redux, Node.js",
-    projectImage: "../../../../public/images/Portfolio.jpg",
+      "An open-source project that provides a set of reusable components for React applications.",
+    skills: ["Storybook","CSS-Grid", "Styled-Components", "Version bumping and Published on npm with github actions"],
+    drawbacks:["No unit Testing" , "No CI/CD"],
+    projectImage: "../../../../public/images/storybook.png",
   },
   {
-    projectName: "Portfolio web side",
+    projectName: "Demo Real Estate search website",
     projectLink: "https://portfolio-web-side.herokuapp.com/",
     projectDescription:
       "This is a portfolio web side application built with React, Redux, and Node.js. It is a full stack application that allows users to create, edit, and delete projects.",
-    projectMainTech: "React, Redux, Node.js",
-    projectImage: "../../../../public/images/Portfolio.jpg",
+    skills: ["Cool animations", "Responsive design (Desktop and tablet)", "SCSS", "Theme colors managment using global state"],
+    drawbacks:["No common component library", "Not responsive for mobile"],
+    projectImage: "../../../../public/images/dream-house.png",
   },
+  {
+    projectName: "Admin dashboard",
+    projectLink: "https://admin-dashboard-83b97.web.app",
+    projectSourceCode:"https://github.com/sfiller23/admin-dashboard-grid",
+    projectDescription:
+      "CSS-Grid learning project using advanced Grid concepts to make the page responsive using only CSS-grid.",
+    skills: ["CSS-Grid", "Responsive design"],
+    drawbacks:["Static page"],
+    projectImage: "../../../../public/images/dashboard.png",
+  },
+  {
+    projectName: "Youtube mirror site",
+    projectLink: "https://my-773b1.web.app/",
+    projectSourceCode:"https://github.com/sfiller23/my-youtube",
+    projectDescription:
+      "The purpose of this project was to learn React by mimicking youtube main functionality.",
+    skills: ["Styled-components", "context API","reuseable components"],
+    drawbacks:["basic react knowledge"],
+    projectImage: "../../../../public/images/my-youtube.png",
+  },
+  {
+    projectName: "Youtube mirror site",
+    projectLink: "https://my-773b1.web.app/",
+    projectSourceCode:"https://github.com/sfiller23/my-youtube",
+    projectDescription:
+      "The purpose of this project was to learn React by mimicking youtube main functionality.",
+    skills: ["Styled-components", "context API","reuseable components"],
+    drawbacks:["basic react knowledge"],
+    projectImage: "../../../../public/images/notes.png",
+  },
+  
 ];

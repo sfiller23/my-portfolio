@@ -7,25 +7,23 @@
     &-cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
+      gap: 1.7rem;
       margin-top: 10px;
 
       &-item {
         height: 366px;
-        cursor: pointer;
         position: relative;
         z-index: 9;
-
+        box-shadow: 1px 1px 7px 1px grey;
         &-img-wrapper {
           height: 100%;
-          a {
-            height: 100%;
+
             img {
               height: inherit;
-              object-fit: cover;
+              object-fit: contain;
               width: 100%;
             }
-          }
+          
         }
         .overlay {
           position: absolute;
@@ -43,6 +41,11 @@
 
           div {
             position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100%;
+            width: 100%;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -50,24 +53,53 @@
 
             p {
               color: var(--selected-theme-sub-text-color);
-              margin: 0;
+              padding: 0.7rem;
               font-weight: 500;
-              font-size: 3rem;
+              font-size: 2.2rem;
               position: relative;
               overflow: hidden;
               animation: typingEffect 1s steps(30, end);
               white-space: nowrap;
             }
-            button {
-              cursor: pointer;
+            #main-content{
+              margin-top: 3.5rem;
+              display: flex;
+              align-items: center;
+            }
+            #description{
+              font-size: 1.7rem;
+              font-weight: 300;
+              white-space: unset;
+              word-wrap: break-word;
+              animation: none;
+            }
+            .links{
+              display: flex;
+              flex-direction: row;
+              align-items: flex-end;
+              justify-content: center;
+              gap: 10px;
+              padding-bottom: 10%;
+            }
+            a {
               margin-top: 15px;
-              padding: 10px 70px;
-              font-size: 2rem;
+              padding: 7px 50px;
+              font-size: 1.5rem;
               background: transparent;
               color: var(--selected-theme-sub-text-color);
               border: 1.5px solid var(--selected-theme-sub-text-color);
               border-radius: 4px;
               font-weight: 500;
+              text-decoration: none;
+              &:hover{
+                background: white;
+                color: var(--selected-theme-main-color);
+              }
+            }
+            ul{
+              color: white;
+              text-align: left;
+              font-size: 1.7rem;
             }
           }
         }

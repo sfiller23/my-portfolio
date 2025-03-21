@@ -4,8 +4,11 @@ import { FaDatabase, FaDev } from "react-icons/fa";
 import PageHeaderContent from "../../components/pageHeaderContent/PageHeaderContent";
 import "./about.scss";
 import { personalData } from "./utils";
+import { useState } from "react";
+import { longAboutMe, shortAboutMe } from "./texts";
 
 export default function About() {
+  const [isExpanded, setIsExpanded] = useState(false);
   return (
     <section className="about" id="about">
       <PageHeaderContent
@@ -15,11 +18,17 @@ export default function About() {
       <div className="about-content">
         <div className="about-content-personal-wrapper">
           <h3 className="developer-content">Front end developer</h3>
-          <p>
-            my content my content my content my content my content my content my
-            content my content my content my content my content my content my
-            content my content my content my content
-          </p>
+          <h4 className="brief">Brief overview</h4>
+            <p id="about-me">
+              {shortAboutMe}
+              {isExpanded && <p id="long"> {longAboutMe} </p>}
+              <button
+              className="toggle-about-me"
+              onClick={() => setIsExpanded(!isExpanded)}
+            >
+              {isExpanded ? "Show Less" : "Read More"}
+            </button>
+            </p>         
           <h3 className="personal-content">Personal Information</h3>
           <ul>
             {personalData.map((item, index) => (

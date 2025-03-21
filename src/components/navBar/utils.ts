@@ -9,16 +9,16 @@ export const navMenus: INavBar[] = [
     to: "/",
   },
   {
-    label: "ABOUT ME",
-    to: "/about",
+    label: "PORTFOLIO",
+    to: "/portfolio",
   },
   {
     label: "RESUME",
     to: "/resume",
   },
   {
-    label: "PORTFOLIO",
-    to: "/portfolio",
+    label: "ABOUT ME",
+    to: "/about",
   },
   {
     label: "CONTACT",

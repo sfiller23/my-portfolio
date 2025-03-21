@@ -1,19 +1,39 @@
 @import "../../common-mixins.scss";
 .about {
+  button{
+    margin-top: 10px;
+    display: block;
+    cursor: pointer;
+    padding: 7px 5px;
+    font-size: 1.4rem;
+    background: transparent;
+    color: var(--selected-theme-main-color);
+    border: 1.5px solid var(--selected-theme-main-color);
+    border-radius: 4px;
+    font-weight: 500;
+    &:hover {
+      color: #000;
+      background-color: var(--selected-theme-main-color);
+    }
+  }
   &-content {
     display: flex;
     gap: 20px;
     padding: 20px;
     width: 100%;
     &-personal-wrapper {
+      max-width: 43%;
       flex: 1;
       position: relative;
       animation: getInFromLeftSide 1s ease-in;
-      h3 {
+      h3, h4 {
         margin-bottom: 10px;
         font-size: 2.5rem;
         color: var(--selected-theme-main-color);
         font-weight: 700;
+      }
+      .brief{
+        font-size: 1.8rem;
       }
       h3.personal-content {
         padding-top: 20px;
@@ -24,6 +44,11 @@
         line-height: 1.65;
         padding-bottom: 20px;
         border-bottom: 1px dashed var(--selected-theme-main-color);
+      }
+      #long{
+        padding-bottom: 0;
+        border-bottom: none;
+        animation: growShrink 1s ease-in-out;
       }
       ul {
         li {
@@ -59,12 +84,12 @@
       flex: 1;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      margin-top: 10%;
+      justify-content: flex-start;
+      margin-top: 5%;
       animation: getInFromRightSide 1s ease-in;
       &-inner-content {
-        width: 350px;
-        height: 350px;
+        width: 330px;
+        height: 330px;
         position: relative;
         border-radius: 50%;
         border: 1.5px solid var(--selected-theme-main-color);
@@ -73,7 +98,7 @@
           var(--selected-theme-main-color),
           transparent 90%
         );
-        animation: rotation 10s infinite linear 1s;
+         animation: rotation 10s infinite linear 1s;
 
         div:nth-child(1) {
           position: absolute;
@@ -97,6 +122,15 @@
         }
       }
     }
+  }
+}
+
+@keyframes growShrink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

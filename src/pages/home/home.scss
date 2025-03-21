@@ -33,7 +33,7 @@
     margin-top: 10px;
     animation: fromBottomToTop 2.5s ease-in-out;
     button,
-    a {
+    a:not(.sub-links) {
       cursor: pointer;
       padding: 10px 70px;
       font-size: 2rem;

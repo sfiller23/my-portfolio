@@ -1,5 +1,5 @@
 import { FaBlackTie } from "react-icons/fa";
-import { MdWork } from "react-icons/md";
+import { MdWork, MdCastForEducation  } from "react-icons/md";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -37,14 +37,13 @@ export default function Resume() {
                     background: "#181818",
                     color: "var(--selected-theme-main-color)",
                   }}
-                  date="2020 - present" //change to derive from the data
+                  date={item.date}
                   icon={<MdWork />}
                 >
                   <div className="vertical-timeline-element-title-wrapper">
                     <h3>{item.title}</h3>
-                    <h4>{item.subTitle}</h4>
                   </div>
-                  <p className="vertical-timeline-element-description-wrapper">
+                  <p className="vertical-timeline-element-description-wrapper" style={{fontSize: "1.4rem"}}>
                     {item.description}
                   </p>
                 </VerticalTimelineElement>
@@ -72,14 +71,14 @@ export default function Resume() {
                     background: "#181818",
                     color: "var(--selected-theme-main-color)",
                   }}
-                  date="2020 - present" //change to derive from the data
-                  icon={<MdWork />}
+                  date={item.date}
+                  icon={<MdCastForEducation />}
                 >
                   <div className="vertical-timeline-element-title-wrapper">
                     <h3>{item.title}</h3>
-                    <h4>{item.subTitle}</h4>
+                    {/* <h4>{item.subTitle}</h4> */}
                   </div>
-                  <p className="vertical-timeline-element-description-wrapper">
+                  <p className="vertical-timeline-element-description-wrapper" style={{fontSize: "1.4rem"}}>
                     {item.description}
                   </p>
                 </VerticalTimelineElement>
