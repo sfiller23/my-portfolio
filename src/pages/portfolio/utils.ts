@@ -27,21 +27,22 @@ export const portfolioData: PortfolioData[] = [
     projectImage: "../../../../public/images/chat.png",
   },
   {
-    projectName: "My component library",
+    projectName: "My UI component library",
     projectSourceCode: "https://github.com/sfiller23/sf-component-library",
     projectDescription:
-      "An open-source project that provides a set of reusable components for React applications.",
+      "An open-source project that provides a set of reusable UI components based on CSS-Grid for React applications.",
     skills: ["Storybook","CSS-Grid", "Styled-Components", "Version bumping and Published on npm with github actions"],
     drawbacks:["No unit Testing" , "No CI/CD"],
     projectImage: "../../../../public/images/storybook.png",
   },
   {
     projectName: "Demo Real Estate search website",
-    projectLink: "https://portfolio-web-side.herokuapp.com/",
+    projectSourceCode: "https://github.com/sfiller23/sf-dream-home",
+    projectLink: "https://sf-dream-home.web.app/",
     projectDescription:
-      "This is a portfolio web side application built with React, Redux, and Node.js. It is a full stack application that allows users to create, edit, and delete projects.",
-    skills: ["Cool animations", "Responsive design (Desktop and tablet)", "SCSS", "Theme colors managment using global state"],
-    drawbacks:["No common component library", "Not responsive for mobile"],
+      "This site uses the UI component library to demonstrate the usage of the components in a real-world scenario.",
+    skills: ["Advanced React", "Advenced Firebase use", "Styled-components"],
+    drawbacks:["Not fully responsive"],
     projectImage: "../../../../public/images/dream-house.png",
   },
   {
