@@ -1,5 +1,15 @@
 @import "../../common-mixins.scss";
 .portfolio {
+  #note {
+    color: var(--selected-theme-main-color);
+    padding: 0.7rem;
+    font-weight: 500;
+    font-size: 2.2rem;
+    position: relative;
+    overflow: hidden;
+    animation: typingEffect 2s steps(30, end);
+    white-space: nowrap;
+  }
   &-content {
     padding: 20px;
     width: 100%;

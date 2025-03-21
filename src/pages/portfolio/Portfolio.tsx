@@ -13,7 +13,9 @@ export default function Portfolio() {
         headerText="My portfolio"
         icon={<AiFillProject size={40} />}
       />
+      
       <div className="portfolio-content">
+      <p id="note">All the demo projects are served and hosted by Firebase</p>
         <div className="portfolio-content-cards">
           {portfolioData.map((item, index) => (
             <div

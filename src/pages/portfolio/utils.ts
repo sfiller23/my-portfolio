@@ -65,13 +65,13 @@ export const portfolioData: PortfolioData[] = [
     projectImage: "../../../../public/images/my-youtube.png",
   },
   {
-    projectName: "Youtube mirror site",
-    projectLink: "https://my-773b1.web.app/",
-    projectSourceCode:"https://github.com/sfiller23/my-youtube",
+    projectName: "Valid notes",
+    projectLink: "https://valid-notes.web.app",
+    projectSourceCode:"https://github.com/sfiller23/valid-notes",
     projectDescription:
-      "The purpose of this project was to learn React by mimicking youtube main functionality.",
-    skills: ["Styled-components", "context API","reuseable components"],
-    drawbacks:["basic react knowledge"],
+      "This website is built for personal use. as a guitar player, I want to know what notes I can play while a chord is playing in the background.",
+    skills: ["From music theory to code"],
+    drawbacks:["no frontend clean code considerations were taken"],
     projectImage: "../../../../public/images/notes.png",
   },
   
