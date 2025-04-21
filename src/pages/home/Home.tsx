@@ -1,19 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { init, mousemove, mouseout, resizeReset } from "../../helpers/myCanvas";
 import "./home.scss";
-import { downloadFile } from "../../helpers/getFileFromStorage";
 
 export default function Home() {
-  const [url, setUrl] = useState<string | null>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const appContainerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const filePath = "ProfileR.docx";
-    downloadFile(filePath).then(({ url }) =>setUrl(url));
-  }, []);
-
 
   useEffect(() => {
     const canvas: HTMLCanvasElement | null = canvasRef.current;
@@ -61,11 +53,27 @@ export default function Home() {
             >
               Email me
             </button>
-            <a href={url || "#"} target="_blank" rel="noopener noreferrer">Download resume</a>
+            <a href="/ProfileR.pdf" download="Shimon_Filler_Resume.pdf">
+              Download resume
+            </a>
           </div>
           <div className="contact-me-socials-wrapper">
-            <a className="sub-links" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/shimon-filler-514b76163/"><FaLinkedin size={32} /></a>
-            <a className="sub-links" target="_blank" rel="noopener noreferrer" href="https://github.com/sfiller23"><FaGithub size={32} /></a>            
+            <a
+              className="sub-links"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/shimon-filler-514b76163/"
+            >
+              <FaLinkedin size={32} />
+            </a>
+            <a
+              className="sub-links"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/sfiller23"
+            >
+              <FaGithub size={32} />
+            </a>
           </div>
         </div>
       </section>
