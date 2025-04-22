@@ -13,9 +13,9 @@ export default function Portfolio() {
         headerText="My portfolio"
         icon={<AiFillProject size={40} />}
       />
-      
+
       <div className="portfolio-content">
-      <p id="note">All the demo projects are served and hosted by Firebase</p>
+        <p id="note">All the demo projects are served and hosted by Firebase</p>
         <div className="portfolio-content-cards">
           {portfolioData.map((item, index) => (
             <div
@@ -25,7 +25,7 @@ export default function Portfolio() {
               className="portfolio-content-cards-item"
             >
               <div className="portfolio-content-cards-item-img-wrapper">
-                  <img src={item.projectImage} alt={item.projectName} />
+                <img src={item.projectImage} alt={item.projectName} />
               </div>
               <div className="overlay">
                 {hoveredIndex === index && (
@@ -34,26 +34,33 @@ export default function Portfolio() {
                     <div id="main-content">
                       <p id="description">{item.projectDescription}</p>
                       <p>Skills Demonstrated</p>
-                        <ul>
-                          {item.skills.map((skill, index) => (
-                            <li key={index}>{skill}</li>
-                          ))}
-                        </ul>
-                    
-                    
-                    {item.drawbacks &&
-                    <Fragment>
-                      <p>Drawbacks</p>
                       <ul>
-                        {item.drawbacks?.map((skill, index) => (
+                        {item.skills.map((skill, index) => (
+                          <li key={index}>{skill}</li>
+                        ))}
+                      </ul>
+
+                      {item.drawbacks && (
+                        <Fragment>
+                          <p>Drawbacks</p>
+                          <ul>
+                            {item.drawbacks?.map((skill, index) => (
                               <li key={index}>{skill}</li>
                             ))}
-                      </ul>                           
-                    </Fragment>
-                    }
+                          </ul>
+                        </Fragment>
+                      )}
                       <div className="links">
-                        {item.projectLink && <a href={item.projectSourceCode} target="_blank">Visit</a>}
-                        {item.projectSourceCode && <a href={item.projectSourceCode} target="_blank">Code</a>}
+                        {item.projectLink && (
+                          <a href={item.projectLink} target="_blank">
+                            Visit
+                          </a>
+                        )}
+                        {item.projectSourceCode && (
+                          <a href={item.projectSourceCode} target="_blank">
+                            Code
+                          </a>
+                        )}
                       </div>
                     </div>
                   </div>

@@ -40,8 +40,8 @@ export default function Home() {
       >
         <div className="home-text-wrapper">
           <h1>
-            Hello, I'm Shimon
-            <br />a Front End developer.
+            Hello, I'm Shimon.
+            <br />a Front-End developer.
           </h1>
         </div>
         <div className="contact-me">
