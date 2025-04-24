@@ -20,7 +20,7 @@ export const portfolioData: PortfolioData[] = [
       "Cool animations",
       "Responsive design (Desktop and tablet)",
       "SCSS",
-      "Theme colors managment using global state",
+      "Theme colors management using global state",
     ],
     drawbacks: ["No common component library", "Not responsive for mobile"],
     projectImage: `${imagesPath}portfolio.png`,
@@ -30,12 +30,12 @@ export const portfolioData: PortfolioData[] = [
     projectLink: "https://sfchat-47232.web.app/login",
     projectSourceCode: "https://github.com/sfiller23/sfChat",
     projectDescription:
-      "The app was created to demontstare complex data handling in a Real-time chat, including states like seen, sent, writing and profile image upload (React+Typescript)",
+      "The app was created to demonstrate complex data handling in a Real-time chat, including states like seen, sent, writing and profile image upload (React+Typescript)",
     skills: [
       "Authentication flow",
       "Fully responsive",
       "Webhooks",
-      "Combination of Context and Redux",
+      "Complex UI and logic",
       "API management using Redux-toolkit",
       "SCSS",
       "Code splitting",
@@ -67,14 +67,21 @@ export const portfolioData: PortfolioData[] = [
     projectImage: `${imagesPath}dream-house.png`,
   },
   {
-    projectName: "Admin dashboard",
-    projectLink: "https://admin-dashboard-83b97.web.app",
-    projectSourceCode: "https://github.com/sfiller23/admin-dashboard-grid",
+    projectName: "Angular chat app",
+    projectLink: "https://mychatapp4-1f82e.web.app/",
+    projectSourceCode: "https://github.com/sfiller23/myChatApp",
     projectDescription:
-      "CSS-Grid learning project using advanced Grid concepts to make the page responsive using only CSS-grid.",
-    skills: ["CSS-Grid", "Responsive design"],
-    drawbacks: ["Static page"],
-    projectImage: `${imagesPath}dashboard.png`,
+      "This is my first Angular project. The objective was to implement my knowledge while I'm studying to finish my degree",
+    skills: [
+      "Authentication flow",
+      "Fully responsive",
+      "Complex UI and logic",
+      "Ngrx",
+      "Rxjs",
+      "Code splitting",
+    ],
+    drawbacks: ["Based on Timers"],
+    projectImage: `${imagesPath}angularChat.jpg`,
   },
   {
     projectName: "Youtube mirror site",
@@ -87,6 +94,14 @@ export const portfolioData: PortfolioData[] = [
     projectImage: `${imagesPath}my-youtube.png`,
   },
   {
+    projectName: "Personal trainer website",
+    projectLink: "https://50plusfitness.co.uk/",
+    projectDescription: "My first freelance work",
+    skills: ["WordPress", "SEO", "Contact chat"],
+    drawbacks: ["CMS"],
+    projectImage: `${imagesPath}fitness.jpg`,
+  },
+  {
     projectName: "Valid notes",
     projectLink: "https://valid-notes.web.app",
     projectSourceCode: "https://github.com/sfiller23/valid-notes",
@@ -95,5 +110,15 @@ export const portfolioData: PortfolioData[] = [
     skills: ["From music theory to code"],
     drawbacks: ["no frontend clean code considerations were taken"],
     projectImage: `${imagesPath}notes.png`,
+  },
+  {
+    projectName: "Admin dashboard",
+    projectLink: "https://admin-dashboard-83b97.web.app",
+    projectSourceCode: "https://github.com/sfiller23/admin-dashboard-grid",
+    projectDescription:
+      "CSS-Grid learning project using advanced Grid concepts to make the page responsive using only CSS-grid.",
+    skills: ["CSS-Grid", "Responsive design"],
+    drawbacks: ["Static page"],
+    projectImage: `${imagesPath}dashboard.png`,
   },
 ];
