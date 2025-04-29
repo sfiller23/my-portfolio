@@ -108,8 +108,8 @@ export const portfolioData: PortfolioData[] = [
     projectDescription:
       "This website is built for personal use. as a guitar player, I want to know what notes I can play while a chord is playing in the background.",
     skills: ["From music theory to code"],
-    drawbacks: ["no frontend clean code considerations were taken"],
-    projectImage: `${imagesPath}notes.png`,
+    drawbacks: ["Basic React skills"],
+    projectImage: `${imagesPath}valid-notes.jpg`,
   },
   {
     projectName: "Admin dashboard",
