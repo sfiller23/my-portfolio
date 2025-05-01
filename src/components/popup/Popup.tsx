@@ -15,7 +15,7 @@ const Popup: React.FC<PopupProps> = ({ message, onClose }) => {
         <button onClick={onClose}>Close</button>
       </div>
     </div>,
-    document.getElementById("popup-root")! // Ensure this matches your HTML structure
+    document.getElementById("popup-root")!
   );
 };
 

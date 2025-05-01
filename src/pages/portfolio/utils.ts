@@ -12,7 +12,7 @@ const imagesPath = "/images/";
 
 export const portfolioData: PortfolioData[] = [
   {
-    projectName: "Current Site",
+    projectName: "Current Portfolio WebSite",
     projectDescription:
       "This is a portfolio web side. It's built with React and TypeScript, using context API for state management.",
     projectSourceCode: "https://github.com/sfiller23/my-portfolio",
