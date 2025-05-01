@@ -1,3 +1,22 @@
+# My Portfolio
+
+This is a personal portfolio website built with React, TypeScript, and SCSS. It showcases projects, skills, and contact information, and includes features like theme switching and Firebase integration.
+
+## Features
+
+- **Responsive Design**: Optimized for desktop and tablet devices.
+- **Theme Management**: Dynamic theme switching using CSS custom properties.
+- **Portfolio Showcase**: Displays a list of projects with descriptions, links, and images.
+- **Routing**: Uses `react-router-dom` for navigation between pages.
+
+## Technologies Used
+
+- **Frontend**: React, TypeScript, SCSS
+- **State Management**: Context API
+- **Routing**: React Router
+- **Hosting**: Firebase (for potential future use)
+- **Build Tool**: Vite
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -17,12 +36,12 @@ If you are developing a production application, we recommend updating the config
 export default {
   // other rules...
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
+    ecmaVersion: "latest",
+    sourceType: "module",
+    project: ["./tsconfig.json", "./tsconfig.node.json"],
     tsconfigRootDir: __dirname,
   },
-}
+};
 ```
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
