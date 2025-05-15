@@ -20,7 +20,7 @@ export const portfolioData: PortfolioData[] = [
       "Cool animations",
       "Responsive design (Desktop and tablet)",
       "SCSS",
-      "Theme colors management using global state",
+      "Theme colors management using css vars only",
     ],
     drawbacks: ["No common component library", "Not responsive for mobile"],
     projectImage: `${imagesPath}portfolio.png`,

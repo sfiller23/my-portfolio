@@ -9,7 +9,9 @@ import Portfolio from "./pages/portfolio/Portfolio";
 import Resume from "./pages/resume/Resume";
 
 // Import the functions you need from the SDKs you need
+import { getAnalytics, logEvent } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -22,12 +24,13 @@ const firebaseConfig = {
   storageBucket: "my-portfolio-87888.firebasestorage.app",
   messagingSenderId: "200004698689",
   appId: "1:200004698689:web:272cfd67c750e47b9c7cc0",
-  measurementId: "G-GXTHWEQFWM"
+  measurementId: "G-GXTHWEQFWM",
 };
 
 // Initialize Firebase
-//const app = initializeApp(firebaseConfig);
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+logEvent(analytics, "unauthenticated user visited");
 
 function App() {
   return (
