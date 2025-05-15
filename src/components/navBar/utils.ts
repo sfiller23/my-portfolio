@@ -21,7 +21,7 @@ export const navMenus: INavBar[] = [
     to: "/about",
   },
   {
-    label: "CONTACT",
-    to: "/contact",
+    label: "FEEDBACK",
+    to: "/feedback",
   },
 ];

@@ -1,5 +1,6 @@
 import { Fragment, useState } from "react";
 import { AiFillProject } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import PageHeaderContent from "../../components/pageHeaderContent/PageHeaderContent";
 import "./portfolio.scss";
 import { portfolioData } from "./utils";
@@ -12,7 +13,12 @@ export default function Portfolio() {
       <PageHeaderContent
         headerText="My portfolio"
         icon={<AiFillProject size={40} />}
-      />
+      >
+        <span id="feedback-link-container">
+          <p>Any feedback would be greatly appreciated:</p>
+          <Link to="/feedback">Give Feedback</Link>
+        </span>
+      </PageHeaderContent>
 
       <div className="portfolio-content">
         <p id="note">All the demo projects are served and hosted by Firebase</p>

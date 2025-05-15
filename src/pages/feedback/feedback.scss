@@ -1,7 +1,7 @@
 @import "../../common-mixins.scss";
 .contact {
   &-content {
-    padding: 20px;
+    padding: 40px;
     &-header-text {
       display: inline-block;
       color: var(--selected-theme-sub-text-color);
@@ -19,17 +19,15 @@
     &-form {
       margin-top: 30px;
       &-controls-wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-direction: column;
         gap: 40px;
         margin-bottom: 30px;
-
         div {
           position: relative;
           .input-name,
-          .input-email,
           .input-description {
-            width: 100%;
+            width: 70%;
             border: 2px solid var(--selected-theme-main-color);
             padding: 20px 10px;
             transition: all 0.5s ease;
@@ -39,7 +37,6 @@
             color: var(--selected-theme-main-color);
           }
           .name-label,
-          .email-label,
           .description-label {
             position: absolute;
             font-weight: 500;
@@ -51,13 +48,11 @@
           }
 
           .input-name:focus,
-          .input-email:focus,
           .input-description:focus {
             outline: none;
           }
 
           .input-name:focus + .name-label,
-          .input-email:focus + .email-label,
           .input-description:focus + .description-label {
             font-size: 1.5rem;
             top: -25px;

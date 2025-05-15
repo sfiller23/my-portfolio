@@ -27,8 +27,8 @@ export const portfolioData: PortfolioData[] = [
   },
   {
     projectName: "Demo chat app",
-    projectLink: "https://sfchat-47232.web.app/login",
-    projectSourceCode: "https://github.com/sfiller23/sfChat",
+    projectLink: "https://newsfchat.firebaseapp.com/",
+    projectSourceCode: "https://github.com/sfiller23/newSFchat",
     projectDescription:
       "The app was created to demonstrate complex data handling in a Real-time chat, including states like seen, sent, writing and profile image upload (React+Typescript)",
     skills: [
@@ -62,7 +62,7 @@ export const portfolioData: PortfolioData[] = [
     projectLink: "https://sf-dream-home.web.app/",
     projectDescription:
       "This site uses the UI component library to demonstrate the usage of the components in a real-world scenario.",
-    skills: ["Advanced React", "Advenced Firebase use", "Styled-components"],
+    skills: ["Advanced React", "Advanced Firebase use", "Styled-components"],
     drawbacks: ["Not fully responsive"],
     projectImage: `${imagesPath}dream-house.png`,
   },

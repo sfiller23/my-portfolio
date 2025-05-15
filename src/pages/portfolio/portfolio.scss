@@ -10,6 +10,35 @@
     animation: typingEffect 2s steps(30, end);
     white-space: nowrap;
   }
+  #feedback-link-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    a {
+      cursor: pointer;
+      padding: 7px 50px;
+      font-size: 2rem;
+      background: transparent;
+      color: var(--selected-theme-main-color);
+      border: 1.5px solid var(--selected-theme-main-color);
+      border-radius: 4px;
+      font-weight: 500;
+      &:hover {
+        color: #000;
+        background-color: var(--selected-theme-main-color);
+      }
+    }
+    p {
+      color: var(--selected-theme-main-color);
+      //padding: 0.7rem;
+      font-weight: 500;
+      font-size: 2.2rem;
+      position: relative;
+      overflow: hidden;
+      animation: typingEffect 1s steps(30, end);
+      white-space: nowrap;
+    }
+  }
   &-content {
     padding: 20px;
     width: 100%;
@@ -28,12 +57,11 @@
         &-img-wrapper {
           height: 100%;
 
-            img {
-              height: inherit;
-              object-fit: contain;
-              width: 100%;
-            }
-          
+          img {
+            height: inherit;
+            object-fit: contain;
+            width: 100%;
+          }
         }
         .overlay {
           position: absolute;
@@ -71,19 +99,19 @@
               animation: typingEffect 1s steps(30, end);
               white-space: nowrap;
             }
-            #main-content{
+            #main-content {
               margin-top: 3.5rem;
               display: flex;
               align-items: center;
             }
-            #description{
+            #description {
               font-size: 1.7rem;
               font-weight: 300;
               white-space: unset;
               word-wrap: break-word;
               animation: none;
             }
-            .links{
+            .links {
               display: flex;
               flex-direction: row;
               align-items: flex-end;
@@ -101,12 +129,12 @@
               border-radius: 4px;
               font-weight: 500;
               text-decoration: none;
-              &:hover{
+              &:hover {
                 background: white;
                 color: var(--selected-theme-main-color);
               }
             }
-            ul{
+            ul {
               color: white;
               text-align: left;
               font-size: 1.7rem;

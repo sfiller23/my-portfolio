@@ -1,11 +1,28 @@
+import { getAuth, signInAnonymously } from "firebase/auth";
 import { useEffect, useRef } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { init, mousemove, mouseout, resizeReset } from "../../helpers/myCanvas";
 import "./home.scss";
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const appContainerRef = useRef<HTMLDivElement>(null);
+
+  const auth = getAuth();
+
+  useEffect(() => {
+    const signIn = async () => {
+      //Anonymously sign in for the feedback request
+      try {
+        const res = await signInAnonymously(auth);
+        localStorage.setItem("userId", res.user.uid);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    signIn();
+  }, [auth]);
 
   useEffect(() => {
     const canvas: HTMLCanvasElement | null = canvasRef.current;
@@ -56,6 +73,7 @@ export default function Home() {
             <a href="/ProfileR.pdf" download="Shimon_Filler_Resume.pdf">
               Download resume
             </a>
+            <Link to="/portfolio">My Portfolio</Link>
           </div>
           <div className="contact-me-socials-wrapper">
             <a
